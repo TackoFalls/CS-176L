@@ -6,68 +6,60 @@ public class housePainting {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		//Define Variables
-		double lengthOfHouse = 0;
-		double widthOfHouse = 0;
-		double heightOfHouse = 0;
-		double numberOfWindows = 0;
-		double LengthOfWindow = 0;
-		double widthOfWindow =  0;
-		double numberOfDoors = 0;
-		double lengthOfDoor = 0;
-		double widthOfDoor = 0;
-		double totalSurfaceArea = 0;
-		double costPerSqFt = 0;
-		double estimate = 0;
+		double lengthOfHouse = 40;
+		double widthOfHouse = 15;
+		double heightOfHouse = 25;
+		double numberOfWindows = 10;
+		double lengthOfWindow = 4;
+		double widthOfWindow =  2;
+		double numberOfDoors = 2;
+		double lengthOfDoor = 6;
+		double widthOfDoor = 3;
+		double costPerSqFt = 5;
 		
 		
 		
 		//Inputs
 		System.out.println("Please enter length of house: ");
 		lengthOfHouse = sc.nextDouble();
-		System.out.println(lengthOfHouse);
 		System.out.println("Please enter width of house: ");
 		widthOfHouse = sc.nextDouble();
-		System.out.println(widthOfHouse);
 		System.out.println("Please enter height of house: ");
 		heightOfHouse = sc.nextDouble();
-		System.out.println(heightOfHouse);
 		System.out.println("Please enter number of windows: ");
 		numberOfWindows = sc.nextDouble();
-		System.out.println(lengthOfHouse);
 		System.out.println("Please enter main length of each window: ");
-		lengthOfHouse = sc.nextDouble();
-		System.out.println(lengthOfHouse);
-		System.out.println("Please enter main width of each window:: ");
-		lengthOfHouse = sc.nextDouble();
-		System.out.println(lengthOfHouse);
+		lengthOfWindow = sc.nextDouble();
+		System.out.println("Please enter main width of each window: ");
+		widthOfWindow  = sc.nextDouble();
 		System.out.println("Please enter number of doors: ");
-		lengthOfHouse = sc.nextDouble();
-		System.out.println(lengthOfHouse);
+		numberOfDoors = sc.nextDouble();
 		System.out.println("Please enter main length of each door: ");
-		lengthOfHouse = sc.nextDouble();
-		System.out.println(lengthOfHouse);
+		lengthOfDoor = sc.nextDouble();
 		System.out.println("Please enter main width of each door: ");
-		lengthOfHouse = sc.nextDouble();
-		System.out.println(lengthOfHouse);
+		widthOfDoor = sc.nextDouble();
 		System.out.println("Please enter cost per square foot: ");
-		lengthOfHouse = sc.nextDouble();
-		System.out.println(lengthOfHouse);
+		costPerSqFt = sc.nextDouble();
 		//Calculations
 		
+		double sqftPeak = (lengthOfHouse * widthOfHouse) + 0.5 * (lengthOfHouse * (heightOfHouse-widthOfHouse));
+	    double sqftNormal = lengthOfHouse * widthOfHouse;
+	    double totalSurfaceArea = 2 * sqftPeak + 2 * sqftNormal;
+	    double totalSurfaceAreaFinal = totalSurfaceArea - (numberOfWindows * widthOfWindow * lengthOfWindow) + (numberOfDoors * lengthOfDoor * widthOfDoor);
+		double estimate = totalSurfaceAreaFinal * costPerSqFt;
+		
+		//deduct total window and door surface area from total surface area, then find estimate normally
 		
 		
 		
-		//Had difficulty finding calculation for outputting the total Surface Area within the assignment, this was my main and only issue as well unfortunately 
 		
-		totalSurfacArea = ();
-		
-		estimate = ((totalSurfaceArea)* (costPerSqFt));
+//		estimate = ((totalSurfaceArea)* (costPerSqFt));
 		
 		//Outputs
-	    System.out.println(totalSurfaceArea);
-	    totalSurfaceArea = sc.nextDouble();
-	    System.out.println(estimate);
-	    estimate = sc.nextDouble();
+	    System.out.println("Your total surface area is " + totalSurfaceArea);
+
+	    System.out.println("Your total surface area is " + totalSurfaceAreaFinal);
+	    System.out.println("Your total estimate is " + estimate);
 	}
 
 }
