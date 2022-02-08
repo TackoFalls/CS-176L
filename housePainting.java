@@ -45,7 +45,7 @@ public class housePainting {
 		double sqftPeak = (lengthOfHouse * widthOfHouse) + 0.5 * (lengthOfHouse * (heightOfHouse-widthOfHouse));
 	    double sqftNormal = lengthOfHouse * widthOfHouse;
 	    double totalSurfaceArea = 2 * sqftPeak + 2 * sqftNormal;
-	    double totalSurfaceAreaFinal = totalSurfaceArea - (numberOfWindows * widthOfWindow * lengthOfWindow) + (numberOfDoors * lengthOfDoor * widthOfDoor);
+	    double totalSurfaceAreaFinal = totalSurfaceArea - ((numberOfWindows * widthOfWindow * lengthOfWindow) + (numberOfDoors * lengthOfDoor * widthOfDoor));
 		double estimate = totalSurfaceAreaFinal * costPerSqFt;
 		
 		//deduct total window and door surface area from total surface area, then find estimate normally
