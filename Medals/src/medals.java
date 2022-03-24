@@ -1,6 +1,8 @@
 import java.util.*;
 public class medals {
 
+	private static final String String = null;
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
@@ -50,35 +52,31 @@ public class medals {
 	    bronze.add("0");
 		bronze.add("1");
 		
-		ArrayList<String> total = new ArrayList();
-		
-		total.add("3");
-		total.add("1");
-		total.add("1");
-		total.add("1");
-		total.add("1");
-		total.add("5");
-	    total.add("1");
-		total.add("2");
-        medalList.add(countries);
-        medalList.add(gold);
-        medalList.add(silver);
-        medalList.add(bronze);
-        medalList.add(total);
-
-
-        
-        
-        System.out.println(medalList.get(0));
-        System.out.println(medalList.get(1));
-        System.out.println(medalList.get(2));
-        System.out.println(medalList.get(3));
-        System.out.println(medalList.get(4));
-
-
+		medalList.add(countries);
+		medalList.add(gold);
+		medalList.add(silver);
+		medalList.add(bronze);
 
 		
+  //for loop 
+	
+	for (int row = 0; row < medalList.get(0).size();row++)	{
 		
-	}
+		   int goldCount = Integer.parseInt(medalList.get(1).get(row));
+		   int silverCount = Integer.parseInt(medalList.get(2).get(row));
+		   int bronzeCount = Integer.parseInt(medalList.get(3).get(row));
+		   
+		   
+		   
+		   
+		        System.out.println(medalList.get(0).get(row));
+		        System.out.println(medalList.get(1).get(row));
+		        System.out.println(medalList.get(2).get(row));
+		        System.out.println(medalList.get(3).get(row));
 
+		   
+  }			
+ }
 }
+
+
